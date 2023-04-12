@@ -50,6 +50,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     if(elementos[i]==NULL || elementos[i]->key==NULL)
      {
       elementos[i]=par;
+      break;
      }
   }
   local->size++;
