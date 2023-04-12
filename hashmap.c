@@ -56,7 +56,7 @@ void enlarge(HashMap * map) {
 HashMap * createMap(long capacity) {
 
   HashMap *local=malloc(sizeof(HashMap));
-  Pair *elementos=(Pair*)malloc(sizeof(elementos)*capacity);
+  Pair **elementos=(Pair**)malloc(sizeof(elementos)*capacity);
   
   /*for(int i=0;i<capacity;i++)
     {
