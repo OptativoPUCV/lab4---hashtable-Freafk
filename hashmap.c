@@ -47,11 +47,16 @@ void insertMap(HashMap * map, char * key, void * value) {
   long i=hash(key,local->capacity);
   for(;i<local->capacity;i++)
   {
-    if(elementos[i]==NULL || elementos[i]->key==NULL)
+    if(elementos[i]==NULL)
      {
       elementos[i]=par;
       break;
      }
+    if(elementos[i]->key==NULL)
+    {
+      elementos[i]=par;
+      break;
+    }
   }
   local->size++;
   local->current=i;
