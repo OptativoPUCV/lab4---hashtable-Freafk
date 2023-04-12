@@ -50,7 +50,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     elementos[indice]->value=value;
   }
   else{
-    for(long i=indice;i<local->capacity;i++)
+    for(long i=indice+1;i<local->capacity;i++)
       {
         if(elementos[i]==NULL)
         {
@@ -68,7 +68,7 @@ void insertMap(HashMap * map, char * key, void * value) {
       
   }
   local->size++;
-  local->current=indice;
+  local->current=i;
   return;
 
 }

@@ -179,3 +179,14 @@ Wed 12 Apr 2023 09:52:49 PM UTC:
  1 file changed, 28 insertions(+), 1 deletion(-)
  tests:  0|0
 45e7cd9
+Wed 12 Apr 2023 09:56:54 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:71:18: error: ‘i’ undeclared (first use in this function)
+   71 |   local->current=i;
+      |                  ^
+hashmap.c:71:18: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+7dd20b5
