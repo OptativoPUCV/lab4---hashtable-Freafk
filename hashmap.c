@@ -42,31 +42,17 @@ int is_equal(void* key1, void* key2){
 void insertMap(HashMap * map, char * key, void * value) {
 
   HashMap *local=map;
-  long i;
   Pair **elementos=local->buckets;
-  long indice=hash(key,local->capacity);
-  if(elementos[indice]==NULL)
+  long i=hash(key,local->capacity);
+  
+  for(;i<local->capacity;i++)
   {
-    elementos[indice]->key=key;
-    elementos[indice]->value=value;
-  }
-  else{
-    for(i=indice+1;i<local->capacity;i++)
-      {
-        if(elementos[i]==NULL)
-        {
-          elementos[i]->key=key;
-          elementos[i]->value=value;
-          break;
-        }
-        if(elementos[i]->key==NULL)
-        {
-          elementos[i]->key=key;
-          elementos[i]->value=value;
-          break;
-        }
-      }
-      
+    if(elementos[i]==NULL || elementos[i]->key==NULL)
+     {
+       elementos[i]->key=key;
+       elementos[i]->value=value;
+        break;
+     }
   }
   local->size++;
   local->current=i;
