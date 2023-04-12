@@ -62,6 +62,7 @@ void insertMap(HashMap * map, char * key, void * value) {
      {
       elementos[i]=par;
       break;
+       printf("BUENAAAS GENTEEEE");
      }
     if(elementos[i]->key==NULL)
     {
