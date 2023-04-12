@@ -56,17 +56,13 @@ void enlarge(HashMap * map) {
 HashMap * createMap(long capacity) {
 
   HashMap *local=malloc(sizeof(HashMap));
-  local->buckets=(Pair**)malloc(sizeof(local->buckets)*capacity);
-  Pair **elementos=local->buckets;
+  Pair *elementos=(Pair*)malloc(sizeof(elementos)*capacity);
   
-  
-  for(int i=0;i<capacity;i++)
+  /*for(int i=0;i<capacity;i++)
     {
-      elementos[i]->key=(char*)malloc(sizeof(char)*1);
-      elementos[i]->value=(void*)malloc(sizeof(void*)*1);
       
-      
-    }
+    }*/
+  local->buckets=elementos;
   local->size=0;
   local->current=-1;
 
