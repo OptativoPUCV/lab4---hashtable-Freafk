@@ -60,9 +60,7 @@ HashMap * createMap(long capacity) {
   Pair **elementos=local->buckets;
   for(int i=0;i<capacity;i++)
     {
-      printf("%d \n",i);
-      elementos[i]->key=NULL;
-      elementos[i]->value=NULL;
+      elementos[i]=NULL;
     }
   local->size=0;
   local->current=-1;
