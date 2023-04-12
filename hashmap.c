@@ -60,6 +60,11 @@ void insertMap(HashMap * map, char * key, void * value) {
   }
   local->size++;
   local->current=i;
+  for (int k=0;k<capacity;k++)
+    {
+      printf("%s, ",elementos[i]->key);
+    }
+  printf("\n");
 
 }
 

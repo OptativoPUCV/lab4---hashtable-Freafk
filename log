@@ -228,3 +228,14 @@ Wed 12 Apr 2023 10:47:08 PM UTC:
  tests:  4|5
 total_score: 20/70
 4ec626d
+Wed 12 Apr 2023 11:13:45 PM UTC: 
+ hashmap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:63:18: error: ‘capacity’ undeclared (first use in this function)
+   63 |   for (int k=0;k<capacity;k++)
+      |                  ^~~~~~~~
+hashmap.c:63:18: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+b765f5f
