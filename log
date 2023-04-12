@@ -74,3 +74,17 @@ Wed 12 Apr 2023 09:05:18 PM UTC:
  tests:  0|6
 total_score: 0/70
 ca6691f
+Wed 12 Apr 2023 09:07:47 PM UTC: 
+ hashmap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:60:14: error: expected ‘,’ or ‘;’ before ‘:’ token
+   60 |   for(int i=0:i<capacity;i++)
+      |              ^
+hashmap.c:60:29: error: expected ‘;’ before ‘)’ token
+   60 |   for(int i=0:i<capacity;i++)
+      |                             ^
+      |                             ;
+Compilation failed
+f95869a
