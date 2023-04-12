@@ -1,0 +1,15 @@
+Wed 12 Apr 2023 09:03:55 PM UTC: 
+ hashmap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:58:32: error: ‘map’ undeclared (first use in this function)
+   58 |   HashMap *local=malloc(sizeof(map));
+      |                                ^~~
+hashmap.c:58:32: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:59:17: error: assignment to ‘Pair **’ from incompatible pointer type ‘Pair *’ [-Werror=incompatible-pointer-types]
+   59 |   local->buckets=(Pair*)malloc(sizeof(Pair)*capacity);
+      |                 ^
+cc1: all warnings being treated as errors
+Compilation failed
+458b951
