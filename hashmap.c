@@ -69,6 +69,7 @@ void insertMap(HashMap * map, char * key, void * value) {
       }    
       
     }
+  printf("%ld",local->size);
   printf("\n");
 
 }
