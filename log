@@ -239,3 +239,15 @@ hashmap.c:63:18: error: ‘capacity’ undeclared (first use in this function)
 hashmap.c:63:18: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 b765f5f
+Wed 12 Apr 2023 11:13:56 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:63:18: error: ‘llocal’ undeclared (first use in this function); did you mean ‘local’?
+   63 |   for (int k=0;k<llocal->capacity;k++)
+      |                  ^~~~~~
+      |                  local
+hashmap.c:63:18: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+7bb0bd0
