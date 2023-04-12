@@ -68,3 +68,9 @@ hashmap.c:58:18: note: referencing an object of size 8 allocated by ‘malloc’
 cc1: all warnings being treated as errors
 Compilation failed
 681aa03
+Wed 12 Apr 2023 09:05:18 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|6
+total_score: 0/70
+ca6691f
