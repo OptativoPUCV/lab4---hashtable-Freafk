@@ -58,9 +58,14 @@ HashMap * createMap(long capacity) {
   HashMap *local=malloc(sizeof(HashMap));
   local->buckets=(Pair**)malloc(sizeof(local->buckets)*capacity);
   Pair **elementos=local->buckets;
+  
+  
   for(int i=0;i<capacity;i++)
     {
-      elementos[i]=NULL;
+      elementos[i]->key=(char*)malloc(sizeof(char)*1);
+      elementos[i]->value=(void*)malloc(sizeof(void*)*1);
+      
+      
     }
   local->size=0;
   local->current=-1;
