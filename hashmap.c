@@ -47,10 +47,10 @@ void insertMap(HashMap * map, char * key, void * value) {
   long i=hash(key,local->capacity);
   for (int k=0;k<local->capacity;k++)
     {
-      if(elementos[i]!=NULL)
+      if(elementos[k]!=NULL)
       {
         
-        printf("%s, ",elementos[i]->key);
+        printf("%s, ",elementos[k]->key);
       }    
       
     }
@@ -61,14 +61,12 @@ void insertMap(HashMap * map, char * key, void * value) {
     if(elementos[i]==NULL)
      {
       elementos[i]=par;
-      printf("BUENAAAS GENTEEEE");
       break;
       
      }
     if(elementos[i]->key==NULL)
     {
       elementos[i]=par;
-      printf("BUENAAAS GENTEEEE");
       break;
     }
     i++;
@@ -78,10 +76,10 @@ void insertMap(HashMap * map, char * key, void * value) {
   printf("%s",key);
   for (int k=0;k<local->capacity;k++)
     {
-      if(elementos[i]!=NULL)
+      if(elementos[k]!=NULL)
       {
         
-        printf("%s, ",elementos[i]->key);
+        printf("%s, ",elementos[k]->key);
       }    
       
     }
