@@ -45,6 +45,17 @@ void insertMap(HashMap * map, char * key, void * value) {
   Pair *par=createPair(key, value);
   Pair **elementos=local->buckets;
   long i=hash(key,local->capacity);
+  for (int k=0;k<local->capacity;k++)
+    {
+      if(elementos[i]!=NULL)
+      {
+        
+        printf("%s, ",elementos[i]->key);
+      }    
+      
+    }
+  printf("%ld",local->size);
+  printf("\n");
   for(;i<local->capacity;i++)
   {
     if(elementos[i]==NULL)
