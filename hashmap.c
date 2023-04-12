@@ -62,7 +62,12 @@ void insertMap(HashMap * map, char * key, void * value) {
   local->current=i;
   for (int k=0;k<local->capacity;k++)
     {
-      printf("%s, ",elementos[i]->key);
+      if(elementos[i]!=NULL)
+      {
+        
+        printf("%s, ",elementos[i]->key);
+      }    
+      
     }
   printf("\n");
 
