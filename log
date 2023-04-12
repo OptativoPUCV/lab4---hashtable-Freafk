@@ -168,3 +168,9 @@ hashmap.c:65:15: error: expected expression before ‘;’ token
       |               ^
 Compilation failed
 1ee1f24
+Wed 12 Apr 2023 09:43:06 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+3f8ed04
