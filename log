@@ -100,3 +100,15 @@ Wed 12 Apr 2023 09:11:45 PM UTC:
  tests:  0|6
 total_score: 0/70
 2f50d26
+Wed 12 Apr 2023 09:12:23 PM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:63:7: error: implicit declaration of function ‘printrf’; did you mean ‘printf’? [-Werror=implicit-function-declaration]
+   63 |       printrf("%d \n",i);
+      |       ^~~~~~~
+      |       printf
+cc1: all warnings being treated as errors
+Compilation failed
+ced56fd
