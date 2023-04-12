@@ -44,12 +44,11 @@ void insertMap(HashMap * map, char * key, void * value) {
   HashMap *local=map;
   Pair **elementos=local->buckets;
   long i=hash(key,local->capacity);
-  
   for(;i<local->capacity;i++)
   {
     if(elementos[i]==NULL || elementos[i]->key==NULL)
      {
-      elementos[i]->key=key;
+      strcpy(elementos[i]->key, key);
       elementos[i]->value=value;
       break;
      }
