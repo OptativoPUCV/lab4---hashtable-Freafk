@@ -99,6 +99,7 @@ void eraseMap(HashMap * map,  char * key) {
   HashMap *local=map;
   Pair *par=searchMap(local, key);
   par->key=NULL;
+  local->size--;
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
