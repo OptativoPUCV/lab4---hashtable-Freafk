@@ -123,7 +123,6 @@ Pair * searchMap(HashMap * map,  char * key) {
       if(elementos[indice]==NULL)return NULL;
       if(strcmp(elementos[indice]->key,key)==0)
       {
-        printf("%s",elementos[indice]->key);
         return elementos[indice];
       }
       if(indice==local->capacity)
@@ -132,9 +131,9 @@ Pair * searchMap(HashMap * map,  char * key) {
       }
       if(indice==hash(key, local->capacity)-1)break;
       indice++;
-      printf("HOLAAAA");
       
     }
+  local->current=indice;
     return NULL;
 }
 
