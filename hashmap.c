@@ -135,7 +135,7 @@ Pair * firstMap(HashMap * map) {
   long indice=0;
   while(indice<local->capacity+1)
     {
-      if(elemento[indice]!=NULL)
+      if(elemento[indice]!=NULL && elemento[indice]->key!=NULL)
       {
         local->current=indice;
         return elemento[indice];
