@@ -72,9 +72,24 @@ void insertMap(HashMap * map, char * key, void * value) {
 }
 
 void enlarge(HashMap * map) {
-    enlarge_called = 1; //no borrar (testing purposes)
+  enlarge_called = 1;/*
+  HashMap *local=map;
+  Pair **elementoAntiguo=local->buckets;
+  long capacidadNueva=local->capacity*2;
+  Pair **elementoNuevo=malloc(sizeof(elementoNuevo)*capacidadNueva);
+  long indice=0;
 
-
+  while(indice<local->capacity+2)
+    {
+      if(elementoAntiguo[indice]!=NULL || elementoAntiguo[indice]->key!=NULL)
+      {
+        insertMap(local, elementoAntiguo[indice]->key, elementoAntiguo[indice]->value);
+      }
+      
+      indice++;    
+    }
+  local->buckets=elementoNuevo;
+  enlarge_called = 1; //no borrar (testing purposes)
 }
 
 
@@ -92,7 +107,7 @@ HashMap * createMap(long capacity) {
   local->capacity=capacity;
 
   return local;
-}
+}*/
 
 void eraseMap(HashMap * map,  char * key) {    
 
@@ -150,22 +165,7 @@ Pair * nextMap(HashMap * map) {
 
   HashMap *local=map;
   Pair **elemento=local->buckets;
-  long anterior=local->current;
   long indice=local->current+1;
-  printf("**%s**",elemento[anterior]->key);
-    for (int k=0;k<local->capacity;k++)
-    {
-      
-      if(elemento[k]!=NULL)
-      {
-        
-        printf("%s, ",elemento[k]->key);
-      } 
-      else{
-        printf("+espacio+");
-      }
-      
-    }
 
   while(indice<local->capacity+1)
     {
