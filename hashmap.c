@@ -106,8 +106,8 @@ HashMap * createMap(long capacity) {
   local->current=-1;
   local->capacity=capacity;
 
-  return local;
-}*/
+  return local;*/
+}
 
 void eraseMap(HashMap * map,  char * key) {    
 
