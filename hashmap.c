@@ -62,7 +62,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   printf("\n");*/
   while(local->current<local->capacity)
   {
-    if(strcmp(elementos[i]->key,key)==1)return;
+    if(strcmp(elementos[i]->key,key)==0)return;
     if(elementos[i]==NULL)
      {
       elementos[i]=par;
