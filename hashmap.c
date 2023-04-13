@@ -75,7 +75,7 @@ void insertMap(HashMap * map, char * key, void * value) {
       break;
     }
     if(strcmp(elementos[i]->key,key)==1)return;
-    if(i!=hash(key,local->capacity)-2)
+    if(i==hash(key,local->capacity)-2)
     {
       break;
     }
