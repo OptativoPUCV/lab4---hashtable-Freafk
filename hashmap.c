@@ -128,6 +128,7 @@ Pair * searchMap(HashMap * map,  char * key) {
       if(indice==local->capacity-1)indice=-1;
       if(indice==hash(key, local->capacity)-1)break;
       indice++;
+      printf("HOLAAAA");
       
     }
     return NULL;
