@@ -148,5 +148,20 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
 
+  HashMap *local=map;
+  Pair **elemento=local->buckets;
+  long anterior=local->current;
+  long indice=local->current+1;
+  while(indice<local->capacity+1)
+    {
+      if(elemento[indice]!=NULL && elemento[indice]->key!=NULL)
+      {
+        local->current=indice;
+        return elemento[indice];
+      }
+      if(indice==local->capacity)indice=-1;
+      if(indice==anterior-1)break;
+      indice++;
+    }
     return NULL;
 }
