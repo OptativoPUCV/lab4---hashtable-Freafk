@@ -152,6 +152,20 @@ Pair * nextMap(HashMap * map) {
   Pair **elemento=local->buckets;
   long anterior=local->current;
   long indice=local->current+1;
+    for (int k=0;k<local->capacity;k++)
+    {
+      
+      if(elementos[k]!=NULL)
+      {
+        
+        printf("%s, ",elementos[k]->key);
+      } 
+      else{
+        printf("+espacio+");
+      }
+      
+    }
+
   while(indice<local->capacity+1)
     {
       if(elemento[indice]!=NULL && elemento[indice]->key!=NULL)

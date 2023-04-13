@@ -539,3 +539,15 @@ Thu 13 Apr 2023 01:55:37 AM UTC:
  tests:  15|2
 total_score: 50/70
 708ab80
+Thu 13 Apr 2023 01:58:39 AM UTC: 
+ hashmap.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:158:10: error: ‘elementos’ undeclared (first use in this function); did you mean ‘elemento’?
+  158 |       if(elementos[k]!=NULL)
+      |          ^~~~~~~~~
+      |          elemento
+hashmap.c:158:10: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+d1565f9
