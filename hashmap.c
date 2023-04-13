@@ -155,10 +155,10 @@ Pair * nextMap(HashMap * map) {
     for (int k=0;k<local->capacity;k++)
     {
       
-      if(elementos[k]!=NULL)
+      if(elemento[k]!=NULL)
       {
         
-        printf("%s, ",elementos[k]->key);
+        printf("%s, ",elemento[k]->key);
       } 
       else{
         printf("+espacio+");

@@ -551,3 +551,9 @@ hashmap.c:158:10: error: ‘elementos’ undeclared (first use in this function)
 hashmap.c:158:10: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 d1565f9
+Thu 13 Apr 2023 01:59:45 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  15|2
+total_score: 50/70
+b07636e
