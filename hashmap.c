@@ -51,7 +51,10 @@ void insertMap(HashMap * map, char * key, void * value) {
       {
         
         printf("%s, ",elementos[k]->key);
-      }    
+      } 
+      else{
+        printf("+espacio+")
+      }
       
     }
   printf("%ld",i);
@@ -80,7 +83,10 @@ void insertMap(HashMap * map, char * key, void * value) {
       {
         
         printf("%s, ",elementos[k]->key);
-      }    
+      }   
+      else{
+        printf("+espacio+")
+      }
       
     }
   printf("%ld",local->capacity);

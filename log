@@ -316,3 +316,22 @@ Thu 13 Apr 2023 12:21:14 AM UTC:
  tests:  4|5
 total_score: 20/70
 256c920
+Thu 13 Apr 2023 12:24:56 AM UTC: 
+ hashmap.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:56:28: error: expected ‘;’ before ‘}’ token
+   56 |         printf("+espacio+")
+      |                            ^
+      |                            ;
+   57 |       }
+      |       ~                     
+hashmap.c:88:28: error: expected ‘;’ before ‘}’ token
+   88 |         printf("+espacio+")
+      |                            ^
+      |                            ;
+   89 |       }
+      |       ~                     
+Compilation failed
+58e0e09
