@@ -123,8 +123,9 @@ Pair * searchMap(HashMap * map,  char * key) {
       if(elementos[indice]==NULL)return NULL;
       if(strcmp(elementos[indice]->key,key)==0)
       {
+        local->current=indice;
         return elementos[indice];
-        break;
+        
       }
       if(indice==local->capacity)
       {
@@ -134,8 +135,7 @@ Pair * searchMap(HashMap * map,  char * key) {
       indice++;
       
     }
-  local->current=indice;
-    return NULL;
+  return NULL;
 }
 
 Pair * firstMap(HashMap * map) {
