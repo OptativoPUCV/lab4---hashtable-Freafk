@@ -101,7 +101,21 @@ void eraseMap(HashMap * map,  char * key) {
 
 Pair * searchMap(HashMap * map,  char * key) {   
 
-
+  HashMap *local=map;
+  Pair **elementos=local->buckets;
+  long indice=hash(key,local->capacity);
+  while(1)
+    {
+      if(elementos[indice]==NULL)return NULL;
+      if(elementos[indice]->key==key)
+      {
+        return elementos[indice];
+      }
+      if(indice==local->capacity-1)indice=-1;
+      if(indice==hash(char *key, long capacity)-1)break;
+      indice++;
+      
+    }
     return NULL;
 }
 

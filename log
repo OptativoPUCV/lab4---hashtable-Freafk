@@ -416,3 +416,19 @@ Thu 13 Apr 2023 12:48:27 AM UTC:
  tests:  5|4
 total_score: 30/70
 ced5d49
+Thu 13 Apr 2023 01:28:28 AM UTC: 
+ hashmap.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:115:23: error: expected expression before ‘char’
+  115 |       if(indice==hash(char *key, long capacity)-1)break;
+      |                       ^~~~
+hashmap.c:115:18: error: too few arguments to function ‘hash’
+  115 |       if(indice==hash(char *key, long capacity)-1)break;
+      |                  ^~~~
+hashmap.c:26:6: note: declared here
+   26 | long hash( char * key, long capacity) {
+      |      ^~~~
+Compilation failed
+21d1305
