@@ -79,6 +79,10 @@ void insertMap(HashMap * map, char * key, void * value) {
     {
       break;
     }
+    if(i==local->capacity-1)
+    {
+      i=-1;
+    }
     i++;
   }
   local->size++;
