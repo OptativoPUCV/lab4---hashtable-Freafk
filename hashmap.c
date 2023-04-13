@@ -130,8 +130,20 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-
-    return NULL;
+  HashMap *local=map;
+  Pair **elemento=local->buckets;
+  long indice=0;
+  while(indice<local->capacity+1)
+    {
+      if(elemento[indice]!=NULL)
+      {
+        local->current=indice;
+        return elemento[indice];
+      }
+      indice++;
+    }
+    
+  return NULL;
 }
 
 Pair * nextMap(HashMap * map) {
