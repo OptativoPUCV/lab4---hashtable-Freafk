@@ -104,6 +104,20 @@ Pair * searchMap(HashMap * map,  char * key) {
   HashMap *local=map;
   Pair **elementos=local->buckets;
   long indice=hash(key,local->capacity);
+    for (int k=0;k<local->capacity;k++)
+    {
+      
+      if(elementos[k]!=NULL)
+      {
+        
+        printf("%s, ",elementos[k]->key);
+      } 
+      else{
+        printf("+espacio+");
+      }
+      
+    }
+
   while(1)
     {
       if(elementos[indice]==NULL)return NULL;
