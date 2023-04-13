@@ -174,8 +174,7 @@ Pair * nextMap(HashMap * map) {
         local->current=indice;
         return elemento[indice];
       }
-      if(indice==local->capacity)indice=-1;
-      if(indice==anterior-1)break;
+    
       indice++;
     }
     return NULL;
