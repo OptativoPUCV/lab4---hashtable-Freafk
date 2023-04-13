@@ -62,7 +62,6 @@ void insertMap(HashMap * map, char * key, void * value) {
   printf("\n");
   while(local->current<local->capacity)
   {
-    if(strcmp(elementos[i]->key,key)==1)return;
     if(elementos[i]==NULL)
      {
       elementos[i]=par;
@@ -74,6 +73,7 @@ void insertMap(HashMap * map, char * key, void * value) {
       elementos[i]=par;
       break;
     }
+    if(strcmp(elementos[i]->key,key)==1)return;
     i++;
   }
   local->size++;
