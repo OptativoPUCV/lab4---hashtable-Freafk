@@ -44,7 +44,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   HashMap *local=map;
   Pair *par=createPair(key, value);
   Pair **elementos=local->buckets;
-  long i=hash(key,local->capacity)-1;
+  long i=hash(key,local->capacity);
   for (int k=0;k<local->capacity;k++)
     {
       
@@ -75,7 +75,7 @@ void insertMap(HashMap * map, char * key, void * value) {
       break;
     }
     if(strcmp(elementos[i]->key,key)==1)return;
-    if(i==hash(key,local->capacity)-2)
+    if(i==hash(key,local->capacity)-1)
     {
       break;
     }
