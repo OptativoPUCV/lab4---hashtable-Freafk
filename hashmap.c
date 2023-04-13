@@ -152,6 +152,7 @@ Pair * nextMap(HashMap * map) {
   Pair **elemento=local->buckets;
   long anterior=local->current;
   long indice=local->current+1;
+  printf("**%s**",elemento[anterior]->key);
     for (int k=0;k<local->capacity;k++)
     {
       
