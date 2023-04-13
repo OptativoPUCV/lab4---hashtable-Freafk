@@ -72,14 +72,17 @@ void insertMap(HashMap * map, char * key, void * value) {
 }
 
 void enlarge(HashMap * map) {
-  enlarge_called = 1;/*
+  //enlarge_called = 1;/*
   HashMap *local=map;
   Pair **elementoAntiguo=local->buckets;
-  long capacidadNueva=local->capacity*2;
-  Pair **elementoNuevo=malloc(sizeof(elementoNuevo)*capacidadNueva);
+  long capacidadAntigua=local->capacity;
+  local->capacity*=2;
+  local->size=0;
+  Pair **elementoNuevo=malloc(sizeof(elementoNuevo)*local->capacity);
+  local->buckets=elementoNuevo;
   long indice=0;
 
-  while(indice<local->capacity+2)
+  while(indice<capacidadAntigua)
     {
       if(elementoAntiguo[indice]!=NULL || elementoAntiguo[indice]->key!=NULL)
       {
@@ -88,8 +91,7 @@ void enlarge(HashMap * map) {
       
       indice++;    
     }
-  local->buckets=elementoNuevo;
-  enlarge_called = 1; //no borrar (testing purposes)*/
+  //enlarge_called = 1; //no borrar (testing purposes)
 }
 
 
