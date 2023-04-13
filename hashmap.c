@@ -84,7 +84,7 @@ void enlarge(HashMap * map) {
 
   while(indice<capacidadAntigua)
     {
-      if(elementoAntiguo[indice]!=NULL || elementoAntiguo[indice]->key!=NULL)
+      if(elementoAntiguo[indice]!=NULL && elementoAntiguo[indice]->key!=NULL)
       {
         insertMap(local, elementoAntiguo[indice]->key, elementoAntiguo[indice]->value);
       }
