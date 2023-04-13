@@ -121,7 +121,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   while(1)
     {
       if(elementos[indice]==NULL)return NULL;
-      if(strcmp(elementos[indice]->key,key)==1)
+      if(strcmp(elementos[indice]->key,key)==0)
       {
         printf("%s",elementos[indice]->key);
         return elementos[indice];
