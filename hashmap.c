@@ -89,7 +89,7 @@ void enlarge(HashMap * map) {
       indice++;    
     }
   local->buckets=elementoNuevo;
-  enlarge_called = 1; //no borrar (testing purposes)
+  enlarge_called = 1; //no borrar (testing purposes)*/
 }
 
 
@@ -106,7 +106,7 @@ HashMap * createMap(long capacity) {
   local->current=-1;
   local->capacity=capacity;
 
-  return local;*/
+  return local;
 }
 
 void eraseMap(HashMap * map,  char * key) {    
