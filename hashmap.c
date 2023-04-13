@@ -72,7 +72,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 }
 
 void enlarge(HashMap * map) {
-  //enlarge_called = 1;/*
+  //enlarge_called = 1;
   HashMap *local=map;
   Pair **elementoAntiguo=local->buckets;
   long capacidadAntigua=local->capacity;
@@ -91,7 +91,6 @@ void enlarge(HashMap * map) {
       
       indice++;    
     }
-  //enlarge_called = 1; //no borrar (testing purposes)
 }
 
 
